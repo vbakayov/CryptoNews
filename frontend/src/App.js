@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import {echo} from './actions/echo'
+import {getTwitterFeedAction} from './actions/twitterFeed'
 import {serverMessage} from './reducers'
 
 class App extends Component {
   componentDidMount() {
-      this.props.fetchMessage('Hi!')
+      this.props.fetchMessage('NEOnewstoday')
   }
 render() {
     return (
@@ -20,5 +20,5 @@ render() {
 
 export default connect(
   state => ({ message: serverMessage(state) }),
-  { fetchMessage: echo }
+  { fetchMessage: getTwitterFeedAction }
 )(App);

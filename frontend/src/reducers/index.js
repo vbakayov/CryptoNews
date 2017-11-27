@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import { routerReducer } from 'react-router-redux'
 import auth, * as fromAuth from './auth.js'
-import echo, * as fromEcho from './echo.js'
+import echo, * as fromEcho from './twitterFeed.js'
 
 export default combineReducers({
   auth: auth,
