@@ -5,13 +5,13 @@ import {serverMessage} from './reducers'
 
 class App extends Component {
   componentDidMount() {
-      this.props.fetchMessage('NEOnewstoday')
+      this.props.fetchFeed('NEOnewstoday')
   }
 render() {
     return (
       <div>
         <h2>Welcome to React</h2>
-        <p>{this.props.message}</p>
+        <p>{this.props.string_twits_front}</p>
       </div>
     );
   }
@@ -19,6 +19,6 @@ render() {
 
 
 export default connect(
-  state => ({ message: serverMessage(state) }),
-  { fetchMessage: getTwitterFeedAction }
+  state => ({ string_twits_front: serverMessage(state) }),
+  { fetchFeed: getTwitterFeedAction }
 )(App);

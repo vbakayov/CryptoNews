@@ -23,7 +23,8 @@ How to create db:
    sudo -u postgres psql
    createdb -U postgres awesome_db
 
-
+Kill all processes using the port 8005:
+	sudo fuser -k 8005/tcp
 
 pip install django
 pip install djangorestframework

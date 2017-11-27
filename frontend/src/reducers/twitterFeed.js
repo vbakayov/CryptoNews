@@ -1,14 +1,14 @@
 import * as feed from '../actions/twitterFeed'
 
 const initialState = {
-  message: ""
+  string_twits: ""
 };
 
 export default (state=initialState, action) => {
   switch(action.type) {
     case feed.FEED_SUCCESS:
       return {
-        message: action.payload
+        string_twits: action.payload
 
       };
     default:
@@ -16,4 +16,4 @@ export default (state=initialState, action) => {
   }
 }
 
-export const serverMessage = (state) => state.message;
+export const serverMessage = (state) => state.string_twits;
